@@ -38,10 +38,10 @@ class smartcard {
                         ensure => installed,
                     }
                 }
-                default: { unimplemented() }
+                default: { fail "unimplemented on ${::osfamily} ${::macosx_productversion_major}" }
             }
         }
-        default: { unimplemented() }
+        default: { fail "unimplemented on ${::osfamily}" }
     }
 }
 
